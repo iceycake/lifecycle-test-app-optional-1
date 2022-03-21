@@ -2,9 +2,9 @@
 version: '0.0.3-alpha-1'
 
 services:
-  - name: 'lifecycle-test-app-optional-1'
+  - name: 'lc-test-opt-1'
     github:
-      repository: 'iceycake/lifecycle-test-app-docker'
+      repository: 'iceycake/lifecycle-test-app-optional-1'
       branchName: 'main'
       docker:
         defaultTag: 'main'
@@ -12,11 +12,11 @@ services:
           dockerfilePath: 'app1/dockerfiles/app.dockerfile'
           env:
             source: 'yaml'
-            branch: '{{lifecycle-test-app-docker_branchName}}'
+            branch: '{{lc-test-opt-1_branchName}}'
             appName: 'app1'
         init:
           dockerfilePath: 'app1/dockerfiles/init.dockerfile'
           env:
             source: 'yaml'
-            branch: '{{lifecycle-test-app-docker_branchName}}'
+            branch: '{{lc-test-opt-1_branchName}}'
             appName: 'app1'
